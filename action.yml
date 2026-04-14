@@ -1,0 +1,53 @@
+name: 'SetMatrix'
+description: 'Dynamically generate a matrix JSON for GitHub Actions matrix strategy from inputs, files, or JSON arrays.'
+branding:
+  icon: 'grid'
+  color: 'gray-dark'
+
+inputs:
+  values:
+    description: 'Comma-separated values OR a JSON array (e.g. "a,b,c" or "[\"a\",\"b\",\"c\"]").'
+    required: false
+    default: ''
+
+  json:
+    description: 'Raw JSON array of objects for complex matrices (e.g. [{"os":"ubuntu","node":"18"},{"os":"macos","node":"20"}]).'
+    required: false
+    default: ''
+
+  file:
+    description: 'Path to a JSON file containing the matrix array.'
+    required: false
+    default: ''
+
+  name:
+    description: 'Matrix variable name when using "values" input (used as the key in output JSON).'
+    required: false
+    default: 'value'
+
+  filter:
+    description: 'JSONPath-style filter to exclude items (e.g. "os!=windows" or "node>=18").'
+    required: false
+    default: ''
+
+  include:
+    description: 'JSON array of additional combinations to include.'
+    required: false
+    default: '[]'
+
+  exclude:
+    description: 'JSON array of combinations to exclude.'
+    required: false
+    default: '[]'
+
+outputs:
+  matrix:
+    description: 'The generated matrix JSON object, ready for fromJSON() in matrix strategy.'
+  length:
+    description: 'Number of matrix combinations.'
+  is_empty:
+    description: 'Whether the matrix has zero combinations (true/false).'
+
+runs:
+  using: 'node20'
+  main: 'index.js'

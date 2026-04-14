@@ -1,0 +1,23 @@
+{
+  "name": "setmatrix",
+  "version": "1.0.0",
+  "description": "GitHub Action to dynamically generate matrix JSON for GitHub Actions matrix strategy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skgandikota/SetMatrix.git"
+  },
+  "keywords": ["github-action", "matrix", "dynamic-matrix", "strategy", "ci-cd"],
+  "author": "Saikoushik Gandikota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skgandikota/SetMatrix/issues"
+  },
+  "homepage": "https://github.com/skgandikota/SetMatrix#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.0"
+  }
+}
