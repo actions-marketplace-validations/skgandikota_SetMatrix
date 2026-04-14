@@ -1,4 +1,4 @@
-name: 'DynamicMatrix'
+name: 'Matrix Generator'
 description: 'Dynamically generate a matrix JSON for GitHub Actions matrix strategy from inputs, files, or JSON arrays.'
 branding:
   icon: 'grid'
